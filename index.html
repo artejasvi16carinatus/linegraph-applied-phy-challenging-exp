@@ -1,1 +1,61 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View the document online.">
+  <title>Document Viewer</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f3f4f6;
+      color: #1f2937;
+    }
+    header {
+      padding: 18px 24px;
+      background: #ffffff;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    h1 { margin: 0; font-size: 20px; }
+    .download {
+      display: inline-block;
+      padding: 10px 16px;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      border-radius: 7px;
+      font-size: 14px;
+    }
+    main { padding: 18px; }
+    .viewer {
+      width: 100%;
+      height: calc(100vh - 105px);
+      min-height: 520px;
+      border: 1px solid #d1d5db;
+      border-radius: 8px;
+      background: white;
+    }
+    .fallback { text-align: center; padding: 24px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Document Viewer</h1>
+    <a class="download" href="document.pdf" target="_blank" rel="noopener">Open / Download PDF</a>
+  </header>
+  <main>
+    <iframe class="viewer" src="document.pdf" title="Document PDF">
+      <p class="fallback">Your browser cannot display the PDF.
+        <a href="document.pdf">Open the document here</a>.
+      </p>
+    </iframe>
+  </main>
+</body>
+</html>
